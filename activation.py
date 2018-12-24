@@ -1,5 +1,5 @@
 import numpy as np
-import matplotlib.pylab as plt
+import matplotlib.pyplot as plt
 
 def step(x):
     return np.array(x > 0, dtype=np.int)
