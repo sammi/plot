@@ -1,6 +1,13 @@
 # plot
 Analysis data by matplotlib
 
+# matlotlib configuration on MacOS
+In ourder fix animation crash issue on Mac, you need config TkAgg for matplotlibrc
+```
+mkdir -p ~/.matplotlib
+echo "backend: TkAgg" > ~/.matplotlib/matplotlibrc
+```
+
 # Edit code in vscode
 
 1. create and activate environment
