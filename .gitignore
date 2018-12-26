@@ -1,2 +1,4 @@
 .vscode
 *.swp
+*.mp4
+.DS_Store
