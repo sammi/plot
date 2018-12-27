@@ -20,8 +20,4 @@ def animate(i):
 
 ani = animation.FuncAnimation(fig, animate, init_func=init, interval=2, blit=True, save_count=50)
 
-from matplotlib.animation import FFMpegWriter
-writer = FFMpegWriter(fps=15, metadata=dict(artist='Me'), bitrate=1800)
-ani.save("movie.mp4", writer=writer)
-
 plt.show()
