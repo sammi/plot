@@ -11,9 +11,9 @@ ax.set_ylim(0, 1), ax.set_yticks([])
 
 n_drops = 50
 rain_drops = np.zeros(
-    n_drops, 
+    n_drops,
     dtype=[
-        ('position', float, 2), 
+        ('position', float, 2),
         ('size',     float, 1),
         ('growth',   float, 1),
         ('color',    float, 4)
@@ -24,10 +24,10 @@ rain_drops['position'] = np.random.uniform(0, 1, (n_drops, 2))
 rain_drops['growth'] = np.random.uniform(50, 200, n_drops)
 
 scat = ax.scatter(
-    rain_drops['position'][:, 0], 
+    rain_drops['position'][:, 0],
     rain_drops['position'][:, 1],
-    s=rain_drops['size'], 
-    lw=0.5, 
+    s=rain_drops['size'],
+    lw=0.5,
     edgecolors=rain_drops['color'],
     facecolors='none'
 )
@@ -45,6 +45,7 @@ def update(frame_number):
     scat.set_edgecolors(rain_drops['color'])
     scat.set_sizes(rain_drops['size'])
     scat.set_offsets(rain_drops['position'])
+
 
 animation = FuncAnimation(fig, update, interval=10)
 

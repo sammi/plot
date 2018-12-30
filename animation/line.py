@@ -18,6 +18,7 @@ def animate(i):
     return line,
 
 
-ani = animation.FuncAnimation(fig, animate, init_func=init, interval=2, blit=True, save_count=50)
+ani = animation.FuncAnimation(
+    fig, animate, init_func=init, interval=2, blit=True, save_count=50)
 
 plt.show()
